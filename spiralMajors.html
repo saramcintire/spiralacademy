@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Sara McIntire
+	  Chapter 3 Assignment
+	  CIS 330
+	  Dr. Kovalchick
+	  6/25/2021
+
+      Filename: spiralMajors.html
+   -->
+   
+   <!--
+	  instructions for display formatting and css stylesheet
+	-->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Spiral Academy</title>
+   
+   <link rel="stylesheet" media="screen and (min-width: 1000px)" href="spiral.css" />
+   
+  
+   <link href='http://fonts.googleapis.com/css2?family=Fredoka+One' rel='stylesheet' type='text/css'>
+   
+</head>
+
+   <!--
+		body contains all that is displayed on page
+	-->
+<body>
+   <div id="container">
+   <!--
+	   images and title of heading for all pages
+	-->
+      <header>
+			<img src="images/snail.jpg" width="170" height="170" alt="Snail" title="" id="snail" />
+            <img src="images/plant.jpg" width="170" height="170" alt="Plant" title="" id="plant" />
+            <img src="images/water.jpg" width="170" height="170" alt="Water" title="" id="water" />
+            <img src="images/galaxy.jpg" width="170" height="170" alt="Galaxy" title="" id="galaxy" />
+			Spiral Academy
+      </header>
+
+   <!--
+	   site navigation links to all pages
+	-->
+      <nav>
+         <ul>
+            <li><a href="spiral.html">Home</a></li>
+			<li><a href="spiralContact.html">Contact Us</a></li>
+            <li><a href="spiralAbout.html">About Us</a></li>
+            <li id="currentpage"><a href="#">Majors Offered</a></li>
+            <li><a href="spiralCost.html">Cost Calculator</a></li>
+         </ul>
+      </nav>
+   
+   <!--
+	   side panel containing links to display information for different majors 
+	-->    
+      <aside>         
+		Majors Offered:
+		 <ul>
+            <li onclick="document.getElementById('home').src = whcl">World History, Cultures and Languages</li>
+            <li onclick="document.getElementById('home').src = health">Holistic Health</li>
+            <li onclick="document.getElementById('home').src = farming">Natural Farming</li>
+			<li onclick="document.getElementById('home').src = beauty">Beauty</li>
+			<li onclick="document.getElementById('home').src = living">Clean Living</li>
+			<li onclick="document.getElementById('home').src = jobs">Job Prospects</li>
+         </ul>	
+      </aside>
+  
+   <!--
+	   main body of page displaying images and information about majors
+	-->  
+      <article>
+         <figure>
+			<img src="images/wildflowers.jpg" width="1180" height="650" alt="" title="" id = "home"/>
+			
+         </figure>      
+	  </article>
+    
+   <!--
+		footer element displaying school name and location
+	-->
+      <footer>
+         <p>Spiral Academy &bull; Santa Fe, NM 87501</p>
+      </footer>
+   </div>
+   
+   <!--
+		command to reference JavaScript variables and functions on JavaScript page
+	-->
+   <script src="spiral4.js"></script>
+   
+</body>
+</html>

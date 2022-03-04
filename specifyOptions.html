@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Sara McIntire
+	  Chapter 9 Assignment
+	  CIS 330
+	  Dr. Kovalchick
+	  8/1/2021
+	  Filename: specifyOptions.html
+   -->
+   <!--
+	  instructions for display formatting and css stylesheet
+	-->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Spiral Academy</title>
+   <link rel="stylesheet" media="screen and (min-width: 1000px)" href="spiral.css" />
+   <link href='http://fonts.googleapis.com/css2?family=Fredoka+One' rel='stylesheet' type='text/css'>
+   
+</head>
+
+	<!--
+		body contains all that is displayed on page
+	-->
+<body>
+   <div id="container">
+    <!--
+	   images and title of heading for all pages
+	-->
+	  <header>
+		    <img src="images/snail.jpg" width="170" height="170" alt="Snail" title="" id="snail" />
+            <img src="images/plant.jpg" width="170" height="170" alt="Plant" title="" id="plant" />
+            <img src="images/water.jpg" width="170" height="170" alt="Water" title="" id="water" />
+            <img src="images/galaxy.jpg" width="170" height="170" alt="Galaxy" title="" id="galaxy" />
+			Spiral Academy
+      </header>
+	<!--
+	   site navigation links to all pages
+	-->
+      <nav>
+         <ul>
+            <li><a href="spiral.html">Home</a></li>
+			<li><a href="spiralContact.html">Contact Us</a></li>
+            <li><a href="spiralAbout.html">About Us</a></li>
+            <li><a href="spiralMajors.html">Majors Offered</a></li>
+            <li><a href="spiralCost.html">Cost Calculator</a></li>
+         </ul>
+      </nav>
+    <!--
+	   side panel containing form and fieldset for user input and Specify Options submit button
+	-->
+  <aside> 
+	<!--
+		form that will open the reviewSelections page when submit button is clicked
+	-->
+    <form action="reviewSelections.html" novalidate="novalidate">
+      <fieldset>  
+	<!--
+	   heading for Specify Options panel
+	-->
+		<legend> Specify Options: </legend>
+	
+	<!--
+		div element to display general error message
+	-->
+		<div id="errorText"></div>		
+		
+	<!--
+	   radio buttons for full-time/part-time with labels
+	-->
+		<input id="ftime" name="full or part-time" type="radio" value="full-time" />
+        <label for="ftime">Full-time</label>  
+	<!--
+		div element to display error message for full-time/part-time buttons
+	-->
+		<div id="errorMessageT" name="errorMessage"></div>		    
+        <input id="ptime" name="full or part-time" type="radio" value="part-time" />
+        <label for="ptime">Part-time</label> 
+		
+	<!--
+		div element to display error message for residency select input
+	-->
+		<div id="errorMessageR" name="errorMessage"></div>
+	<!--
+		select input element for residency
+	-->
+		<label for="residency">Residency:</label>
+		<select id="residency" name="residency">
+		<option value="in-state">In-state</option>
+        <option value="out-of-state">Out-of-state</option>
+        <option value="international">International</option>
+			  
+	<!--
+		checkbox input element for on-campus
+	-->
+		<input type="checkbox" id="oncampus" value="yes" name="on-campus" />
+		<label for="oncampus"> On campus </label>
+
+	<!--
+		div element to display error message for credits input 
+	-->
+		<div id="errorMessageC" name="errorMessage"></div>
+	<!--
+		number input element for credits
+	-->
+		<input type="number" min="0" max="22" id="creditsnum" value="0" name="credits"/>
+        <label for="creditsnum">Credits from 1&#8209;22 </label>
+				
+
+	<!--
+		submit button element to validate input and calculat
+	-->
+		<input type="submit" value="Review Selections" id="review"> </input>
+		 
+               	
+	<!--
+		this section was commented out because it was not needed to 
+		display elements and labels for tuition, fees and total cost for this assignment
+	-->
+	<!--
+				<label for="tuition">
+				<p> Tuition: </p>																									
+				</label>
+				<p id ="tuition" name="cost"> </p>
+				
+				<label for="fees">
+			    <p> Fees: </p>
+			    </label>
+					<p id="fees" name = "cost"></p>
+				
+				<label for="total">
+				<p> Total Cost: </p>
+				</label>
+				<p id="total" name = "cost"></p>
+	-->
+            
+	  </fieldset>
+	 </form> 
+    </aside>
+    
+	<!--
+	   main body of page containing tables displaying tuition and fees for all types of students
+	-->
+    <article>
+	  
+	<!--
+		heading for tables
+	-->
+	  <h1>Tuition and Fees Per Semester:</h1>
+	  <h2>Full-time is 12-18 credit hours. Part-time rates are per credit hour.
+		  Students taking more than 18 credit hours will be charged the full-time 
+	      rate plus per-credit tuition for any credits over 18.
+	  </h2>
+	<!--
+		table displaying in-state tuition and fees
+	-->
+	   <table>
+            <caption>In-state:</caption>
+			
+	<!--
+		top row of table containing column headings 
+	-->
+            <thead>
+			   <tr>
+                  <th>Full-time On-campus</th>
+                  <th>Full-time Online</th>
+				  <th>Part-time On-campus</th>
+				  <th>Part-time Online</th>
+               </tr>
+			</thead>
+	<!--
+		body of table displaying tuition and fees for each category of student
+	-->
+			<tbody>
+               <tr>
+                 <td id="tft-1">
+					 <p>Tuition:</p>
+					 <p>Fees:</p>
+                     <p>Total:</p>
+                 </td>
+				 
+				
+				 <td id="tft-2">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total: </p>
+				 </td>
+				 
+				
+				
+				 <td id="tft-3">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+					
+				
+				 <td id="tft-4">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+			   </tr>
+			</tbody>
+	   </table>
+		
+	<!--
+		table displaying out-of-state tuition and fees
+	-->
+	   <table>
+            <caption>Out-of-state:</caption>
+	
+	<!--
+		top row of table containing column headings 
+	-->
+            <thead>
+               <tr>
+                  <th>Full-time On-campus</th>
+                  <th>Full-time Online</th>
+				  <th>Part-time On-campus</th>
+				  <th>Part-time Online</th>
+               </tr>
+			</thead>
+	<!--
+		body of table displaying tuition and fees for each category of student
+	-->		
+	
+			<tbody>
+               <tr>
+                 <td id="tft-5">
+                    <p>Tuition:</p>
+					<p>Fees:</p>
+                    <p>Total:</p>
+                 </td>
+				 				
+				 <td id="tft-6">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+				 				
+				 <td id="tft-7">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+									
+				 <td id="tft-8">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+			   </tr>
+			</tbody>
+	   </table>
+	
+	<!--
+		table displaying international tuition and fees
+	-->
+	   <table>
+            <caption>International:</caption>
+			
+	<!--
+		top row of table containing column headings 
+	-->
+            <thead>
+               <tr>
+                  <th>Full-time  On-campus</th>
+                  <th>Full-time Online</th>
+				  <th>Part-time On-campus</th>
+				  <th>Part-time Online</th>
+               </tr>
+			</thead>
+			
+	<!--
+		body of table displaying tuition and fees for each category of student
+	-->			
+			<tbody>
+               <tr>
+                 <td id="tft-9">
+                    <p>Tuition:</p>
+					<p>Fees:</p>
+                    <p>Total:</p>
+                 </td>
+				 
+				
+				 <td id="tft-10">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+				 				
+				 <td id="tft-11">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+									
+				 <td id="tft-12">
+					<p>Tuition:</p>
+					<p>Fees:</p>
+					<p>Total:</p>
+				 </td>
+			   </tr>
+			</tbody>
+	   </table>
+				  	
+    </article>
+      
+	<!--
+		footer element displaying school name and location
+	-->
+      <footer>
+         <p>Spiral Academy &bull; Santa Fe, NM 87501</p>
+      </footer>
+   </div>
+
+	<!--
+		command to reference JavaScript variables and functions on JavaScript page
+	-->
+   <script src="spiral.js"></script>
+   
+</body>
+</html>
